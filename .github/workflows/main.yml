@@ -26,7 +26,7 @@ jobs:
           DATE=`TZ=-9 date "+%s"`
           echo "{\"attachments\": [{\"color\": \"good\",\"title\": \"[Frontend] テスト！ヨシ！ \", \"title_link\": \"${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\", \"footer\": \"${GITHUB_REF##*/}\", \"ts\": \"$DATE\"}]}" | curl -X POST -H 'Content-type: application/json' -d @- https://hooks.slack.com/services/YOUR_SLACK_WEBHOOK
       - name: Notify on Slack
-        id: notify-slack-success
+        id: notify-slack-failure
         if: failure()
         run: |
           DATE=`TZ=-9 date "+%s"`
