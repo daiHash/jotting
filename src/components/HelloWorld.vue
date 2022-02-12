@@ -15,7 +15,7 @@
           href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
           target="_blank"
           rel="noopener"
-          >router</a
+          >routero</a
         >
       </li>
       <li>
