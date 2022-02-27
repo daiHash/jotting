@@ -1,4 +1,4 @@
-# jotting
+# app
 
 ## Project setup
 ```
