@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  client:
+  jotting_client:
     build: './docker'
     ports:
       - "8080:8080"
-    container_name: client
+    container_name: jotting_client
     volumes:
       - ./:/app
     stdin_open: true

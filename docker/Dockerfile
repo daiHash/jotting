@@ -11,7 +11,7 @@ WORKDIR /app
 # COPY package.json ./
 # COPY yarn.lock ./
 
-RUN apk update && \ yarn global add @vue/cli
+RUN yarn global add @vue/cli
 
 ENV HOST 0.0.0.0
 EXPOSE 8080
