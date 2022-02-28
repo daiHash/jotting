@@ -7,7 +7,11 @@ services:
     container_name: jotting_client
     volumes:
       - ./:/app
+      - node_modules_volume:/app/node_modules
     stdin_open: true
     tty: true
     environment:
       - CHOKIDAR_USEPOLLING=true
+
+volumes:
+  node_modules_volume:
