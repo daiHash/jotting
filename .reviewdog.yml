@@ -1,0 +1,4 @@
+runner:
+  eslint:
+    cmd: yarn --silent test:lint --config ./.eslintrc.js
+    format: eslint
