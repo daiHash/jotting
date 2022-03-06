@@ -1,0 +1,4 @@
+runner:
+  strict-eslint:
+    cmd: npx eslint --quiet --config ./.eslintrc.strict.js
+    format: eslint
