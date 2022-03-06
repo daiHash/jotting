@@ -29,16 +29,17 @@ jobs:
 
       - name: Run eslint
         uses: reviewdog/action-eslint@v1
+        run: reviewdog -f=tsc -reporter=github-pr-review -fail-on-error=true
         with:
           reporter: github-pr-check
           eslint_flags: "./**/*.{vue,ts,js}"
 
-      - name: "Comment PR with eslint errors"
-        uses: actions/github-script@0.3.0
-        # if: github.event_name == 'pull_request'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
-            github.issues.createComment({ issue_number, owner, repo, body: 'Hello world ! 👋' });
-        # if: failure()
+      # - name: "Comment PR with eslint errors"
+      #   uses: actions/github-script@0.3.0
+      #   # if: github.event_name == 'pull_request'
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+      #       github.issues.createComment({ issue_number, owner, repo, body: 'Hello world ! 👋' });
+      # if: failure()
