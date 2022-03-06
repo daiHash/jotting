@@ -8,6 +8,7 @@
 <script lang="ts">
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 import { defineComponent } from "vue";
+console.log('lol');
 
 export default defineComponent({
   name: "HomeView",
