@@ -1,5 +1,4 @@
 runner:
   strict-eslint:
     cmd: npx eslint --quiet --config ./.eslintrc.strict.js
-    # cmd: yarn --silent lint --config ./.eslintrc.strict.js
     format: eslint
