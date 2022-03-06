@@ -27,8 +27,6 @@ jobs:
         env:
           CI: true
       - uses: reviewdog/action-eslint@v1
-        run: |
-          reviewdog -runners=eslint -diff="git diff main" -reporter=github-pr-check -filter-mode=file
         with:
           reporter: github-check
           eslint_flags: "src/"
