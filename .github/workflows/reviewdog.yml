@@ -43,9 +43,8 @@ jobs:
         uses: reviewdog/action-eslint@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-check
+          reporter: github-pr-review
           eslint_flags: "./**/*.{vue,ts,js}"
-          level: "error"
 
       # - name: "Comment PR with eslint errors"
       #   uses: actions/github-script@0.3.0
