@@ -1,4 +1,5 @@
 runner:
   strict-eslint:
-    cmd: yarn --silent lint --config ./.eslintrc.strict.js
+    cmd: npx eslint --quiet --config ./.eslintrc.strict.yml "src/**/*.{js,ts,tsx,vue}"
+    # cmd: yarn --silent lint --config ./.eslintrc.strict.js
     format: eslint
