@@ -11,14 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup Node.js 14.17.4
         uses: actions/setup-node@v1
         with:
           node-version: 14.17.4
+
       - name: yarn install
         run: yarn install
+
       - name: Run jest tests
         run: yarn test:unit
+
       - name: Notify test success on Slack
         id: notify-slack-success
         uses: abinoda/slack-action@master
